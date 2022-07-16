@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Demo4_upload {
+public class Demo5_upload {
 
 	public static void main(String[] args) {
 
@@ -23,9 +23,13 @@ public class Demo4_upload {
 		driver.get("https://www.ilovepdf.com/pdf_to_word");
 
 		
+		File file=new File("files/Balaji Profile_2022.pdf");
 		
-	//work only for the element with tagname <input type='file'/> 
-		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("D:\\Mine\\Company\\Scientific Games3\\automation_workspace\\SeleniumConcepts\\files\\Balaji  Profile_2022.pdf");
+		String filePath=file.getAbsolutePath();
+		System.out.println(filePath);
+		
+ 
+		driver.findElement(By.xpath("//input[@type='file']")).sendKeys(filePath);
 
 	}
 

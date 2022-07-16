@@ -18,6 +18,8 @@ public class Demo2FBLogin {
 		WebElement element = driver.findElement(locator);
 		element.sendKeys("hello");
 		
+//		element.getatt
+		
 //		WebElement element = driver.findElement(By.id("email"));
 //		element.sendKeys("hello");
 		
